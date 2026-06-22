@@ -1,0 +1,124 @@
+/* ----- Material Symbols ----- */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        /* ----- Dropdown (Desktop) ----- */
+        .dropdown-hover:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* ----- Mobile Nav ----- */
+        .mobile-menu-active {
+            transform: translateX(0) !important;
+        }
+
+        /* ----- Mobile Accordion ----- */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-active .chevron-icon {
+            transform: rotate(180deg);
+        }
+
+        /* ----- Hero Animations ----- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0);   }
+            50%       { transform: translateY(10px); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        .blueprint-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .scroll-indicator { animation: bounce-subtle 2s infinite; }
+
+        /* ----- Carousel ----- */
+        .carousel-slide {
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.8s ease;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            z-index: 10;
+        }
+        .carousel-slide.next { transform: translateY(100%);  opacity: 1; }
+        .carousel-slide.prev { transform: translateY(-100%); opacity: 1; }
+
+        /* ----- Services Accordion ----- */
+        .service-desc {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-item.active .service-desc {
+            max-height: 150px;
+            opacity: 1;
+            margin-top: 12px;
+        }
+        #service-image {
+            transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ----- Comparison Slider ----- */
+        .comparison-slider-container {
+            aspect-ratio: 16/10;
+            position: relative;
+            user-select: none;
+            cursor: ew-resize;
+            overflow: hidden;
+        }
+        .comparison-slider-before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        /* ----- Pillars Accordion ----- */
+        .pillar-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        .pillar-item.active .pillar-content {
+            max-height: 150px;
+            opacity: 1;
+            margin-top: 12px;
+        }

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="it">
+
+<!-- ============================================================
+     HEAD
+     ============================================================ -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GI.ADA Servizi srl - Case Su Misura</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary":                      "#344b00",
+                        "primary-container":            "#476500",
+                        "on-primary":                   "#ffffff",
+                        "on-primary-fixed":             "#131f00",
+                        "on-primary-fixed-variant":     "#364e00",
+                        "on-primary-container":         "#bce276",
+                        "primary-fixed":                "#caf082",
+                        "primary-fixed-dim":            "#aed369",
+                        "inverse-primary":              "#aed369",
+                        "surface-tint":                 "#496803",
+
+                        "secondary":                    "#55633a",
+                        "secondary-container":          "#d6e6b2",
+                        "secondary-fixed":              "#d9e9b5",
+                        "secondary-fixed-dim":          "#bdcd9a",
+                        "on-secondary":                 "#ffffff",
+                        "on-secondary-container":       "#59683e",
+                        "on-secondary-fixed":           "#141f01",
+                        "on-secondary-fixed-variant":   "#3e4b25",
+
+                        "tertiary":                     "#6e286b",
+                        "tertiary-container":           "#894084",
+                        "tertiary-fixed":               "#ffd7f5",
+                        "tertiary-fixed-dim":           "#ffaaf4",
+                        "on-tertiary":                  "#ffffff",
+                        "on-tertiary-container":        "#ffc2f4",
+                        "on-tertiary-fixed":            "#380038",
+                        "on-tertiary-fixed-variant":    "#702a6d",
+
+                        "error":                        "#ba1a1a",
+                        "error-container":              "#ffdad6",
+                        "on-error":                     "#ffffff",
+                        "on-error-container":           "#93000a",
+
+                        "background":                   "#fafaee",
+                        "on-background":                "#1a1c15",
+                        "surface":                      "#fafaee",
+                        "surface-dim":                  "#dadbcf",
+                        "surface-bright":               "#fafaee",
+                        "surface-variant":              "#e3e3d7",
+                        "surface-tint":                 "#496803",
+                        "surface-container-lowest":     "#ffffff",
+                        "surface-container-low":        "#f4f4e8",
+                        "surface-container":            "#eeefe2",
+                        "surface-container-high":       "#e8e9dd",
+                        "surface-container-highest":    "#e3e3d7",
+                        "on-surface":                   "#1a1c15",
+                        "on-surface-variant":           "#44493a",
+                        "inverse-surface":              "#2f3129",
+                        "inverse-on-surface":           "#f1f2e5",
+
+                        "outline":                      "#757968",
+                        "outline-variant":              "#c4c9b5"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg":      "0.25rem",
+                        "xl":      "0.5rem",
+                        "full":    "0.75rem"
+                    },
+                    spacing: {
+                        "stack-sm":       "0.5rem",
+                        "stack-md":       "1rem",
+                        "stack-lg":       "2rem",
+                        "section-padding":"5rem",
+                        "container-max":  "1280px",
+                        "gutter":         "24px"
+                    },
+                    fontFamily: {
+                        "body-md":              ["Hanken Grotesk"],
+                        "headline-lg-mobile":   ["Hanken Grotesk"],
+                        "nav-link":             ["Hanken Grotesk"],
+                        "label-sm":             ["Hanken Grotesk"],
+                        "headline-lg":          ["Hanken Grotesk"],
+                        "headline-xl":          ["Hanken Grotesk"],
+                        "heading":              ["Hanken Grotesk"],
+                        "display":              ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "body-md":            ["16px", { lineHeight: "1.5",  letterSpacing: "0.025em", fontWeight: "500" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "1.2",  letterSpacing: "0.01em",  fontWeight: "600" }],
+                        "nav-link":           ["15px", { lineHeight: "1",    letterSpacing: "0.025em", fontWeight: "500" }],
+                        "label-sm":           ["14px", { lineHeight: "1",    letterSpacing: "0.05em",  fontWeight: "600" }],
+                        "headline-lg":        ["32px", { lineHeight: "1.2",  letterSpacing: "0.01em",  fontWeight: "600" }],
+                        "headline-xl":        ["48px", { lineHeight: "1.1",  letterSpacing: "-0.02em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<!-- ============================================================
+     BODY
+     ============================================================ -->
+<body class="bg-background text-on-surface font-body-md">
+
+
+    <!-- ============================================================
+         HEADER — Top Navigation Bar (Fixed)
+         ============================================================ -->
+    <header class="fixed top-0 w-full z-50 bg-white backdrop-blur-xl border-b border-outline-variant/30 transition-all shadow-md">
+        <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto h-20">
+
+            <!-- Logo -->
+            <a class="flex items-center" href="#">
+                <img
+                    alt="GI.ADA Servizi srl"
+                    class="h-12 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrpWrAG5y6asIHx6V87bct-HRSK-UO9YtWGOIrP1s4D1hLAFedUxDnm65J6vlUtfy9e6jZpFRAogMo4zJ4rxbE2SCvwhQBLBA0FsAbNxRtQtSmZ2aJCtHAqrF9LpEG-bLzT1QW8Rc-gHtnD_elUHK0r5217BgWm-Cq_47bEKEpfYiLVhDhyCzAsqeOn3y1_DBTfxD3fjHtVtB8kYOoJ0WXxyIhqj_d5bK0kBJanPt2uk8RwM7_pVAKphAuNpt5x0dy0WLsxk0dAS0"
+                />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <ul class="flex items-center gap-6 font-nav-link text-nav-link tracking-wide">
+                    <li>
+                        <a class="text-primary-container border-b-2 border-primary-container pb-1 transition-colors" href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#chi-siamo">Chi siamo</a>
+                    </li>
+                    <li>
+                        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#lavori">Lavori</a>
+                    </li>
+                    <li>
+                        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#servizi">Servizi</a>
+                    </li>
+
+                    <!-- Dropdown: Cosa offriamo -->
+                    <li class="relative dropdown-hover py-4">
+                        <button class="flex items-center gap-1 text-on-surface-variant hover:text-primary-container transition-colors cursor-default">
+                            Cosa offriamo
+                            <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 bg-surface shadow-xl border border-outline-variant rounded-xl overflow-hidden py-2">
+                            <a class="block px-4 py-3 text-body-md text-on-surface-variant hover:bg-secondary-container hover:text-primary-container transition-all" href="#">Progettazione e ingegneria</a>
+                            <a class="block px-4 py-3 text-body-md text-on-surface-variant hover:bg-secondary-container hover:text-primary-container transition-all" href="#">Strutture in legno</a>
+                            <a class="block px-4 py-3 text-body-md text-on-surface-variant hover:bg-secondary-container hover:text-primary-container transition-all" href="#">Efficienza energetica e finiture</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#perche-noi">Perché Noi</a>
+                    </li>
+                    <li>
+                        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#contatti">Contatti</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center">
+                <a
+                    class="bg-primary-container text-on-primary px-6 py-2.5 rounded-xl font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-opacity shadow-sm"
+                    href="#preventivo"
+                >
+                    Richiedi Preventivo
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button aria-label="Menu" class="lg:hidden p-2 text-on-surface-variant" id="mobile-menu-toggle">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+         SECTION — Hero
+         ============================================================ -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden" id="home">
+
+        <!-- Background Image + Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img alt="Hero Background" class="w-full h-full object-cover" src="/IMG/background2.png" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 container-max mx-auto px-gutter text-center">
+            <div class="max-w-4xl mx-auto space-y-8">
+
+                <h1 class="font-headline-xl text-4xl md:text-6xl lg:text-7xl leading-tight text-white opacity-0 animate-fade-in-up">
+                    Case Su Misura,
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">Costruite Per Durare.</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up delay-100">
+                    GI.ADA Servizi srl è il tuo partner di fiducia per la realizzazione di strutture in legno ecosostenibili,
+                    ingegneria di precisione e finiture d'eccellenza che uniscono innovazione e artigianalità.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 opacity-0 animate-fade-in-up delay-200">
+                    <a
+                        class="w-full sm:w-auto bg-[#476500] text-white px-8 py-4 rounded-xl font-label-sm text-sm uppercase tracking-widest hover:opacity-90 transition-all shadow-lg hover:shadow-primary-container/20"
+                        href="#preventivo"
+                    >
+                        Inizia il tuo progetto
+                    </a>
+                    <a
+                        class="w-full sm:w-auto bg-white/5 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-label-sm text-sm uppercase tracking-widest hover:bg-white/10 transition-all"
+                        href="#chi-siamo"
+                    >
+                        Scopri di più
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-300">
+            <span class="text-white/40 text-[10px] uppercase tracking-[0.2em] font-bold">Scroll</span>
+            <div class="scroll-indicator">
+                <span class="material-symbols-outlined text-white/50 text-3xl">expand_more</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Chi Siamo
+         ============================================================ -->
+    <section class="relative py-24 md:py-32 bg-[#fcf9f8] overflow-hidden" id="chi-siamo">
+
+        <!-- Decorative Background Logo -->
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden lg:block">
+            <img
+                alt=""
+                class="w-[500px] h-auto"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrpWrAG5y6asIHx6V87bct-HRSK-UO9YtWGOIrP1s4D1hLAFedUxDnm65J6vlUtfy9e6jZpFRAogMo4zJ4rxbE2SCvwhQBLBA0FsAbNxRtQtSmZ2aJCtHAqrF9LpEG-bLzT1QW8Rc-gHtnD_elUHK0r5217BgWm-Cq_47bEKEpfYiLVhDhyCzAsqeOn3y1_DBTfxD3fjHtVtB8kYOoJ0WXxyIhqj_d5bK0kBJanPt2uk8RwM7_pVAKphAuNpt5x0dy0WLsxk0dAS0"
+            />
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                <!-- Left Column: Logo + Badges -->
+                <div class="flex flex-col items-center lg:items-start">
+                    <img
+                        alt="GI.ADA Servizi srl Logo"
+                        class="w-64 md:w-80 h-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrpWrAG5y6asIHx6V87bct-HRSK-UO9YtWGOIrP1s4D1hLAFedUxDnm65J6vlUtfy9e6jZpFRAogMo4zJ4rxbE2SCvwhQBLBA0FsAbNxRtQtSmZ2aJCtHAqrF9LpEG-bLzT1QW8Rc-gHtnD_elUHK0r5217BgWm-Cq_47bEKEpfYiLVhDhyCzAsqeOn3y1_DBTfxD3fjHtVtB8kYOoJ0WXxyIhqj_d5bK0kBJanPt2uk8RwM7_pVAKphAuNpt5x0dy0WLsxk0dAS0"
+                    />
+
+                    <!-- Feature Badges -->
+                    <div class="mt-10 flex flex-wrap lg:flex-nowrap gap-6">
+
+                        <!-- Badge: Sostenibilità -->
+                        <div class="flex items-start gap-3 p-5 bg-white rounded-xl shadow-sm border border-[#1c1b1b]/5 flex-1 min-w-[200px]">
+                            <div class="w-10 h-10 rounded-lg bg-[#476500]/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-[#476500]" fill="none" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-[#1c1b1b] text-sm">Sostenibilità</h4>
+                                <p class="text-[#444939] text-xs mt-1 leading-relaxed">Legname da foreste gestite responsabilmente</p>
+                            </div>
+                        </div>
+
+                        <!-- Badge: Precisione -->
+                        <div class="flex items-start gap-3 p-5 bg-white rounded-xl shadow-sm border border-[#1c1b1b]/5 flex-1 min-w-[200px]">
+                            <div class="w-10 h-10 rounded-lg bg-[#1c1b1b]/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-[#1c1b1b]" fill="none" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-[#1c1b1b] text-sm">Precisione</h4>
+                                <p class="text-[#444939] text-xs mt-1 leading-relaxed">Tecnologie CNC per tolleranze millimetriche</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Text -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-[2px] bg-[#476500]"></div>
+                        <span class="text-[#476500] font-heading font-semibold text-sm tracking-widest uppercase">Visione &amp; Valori</span>
+                    </div>
+
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#1c1b1b] leading-tight tracking-tight">
+                        Un ecosistema di benessere.
+                    </h2>
+
+                    <p class="mt-8 text-[#444939] text-base md:text-lg leading-relaxed">
+                        Fondata sulla passione per l'edilizia bio-climatica, GI.ADA Servizi srl è il punto di riferimento per chi cerca
+                        non solo una casa, ma un ecosistema di benessere.
+                    </p>
+                    <p class="mt-4 text-[#444939] text-base md:text-lg leading-relaxed">
+                        Con sede a Patti (Messina), operiamo su tutto il territorio nazionale nella progettazione di case prefabbricate
+                        in legno, strutture, coperture e capannoni industriali.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="mt-8 flex items-center gap-6">
+                        <div class="text-center">
+                            <span class="font-display text-3xl font-bold text-[#476500]">15+</span>
+                            <p class="text-xs text-[#444939] mt-1">Anni di esperienza</p>
+                        </div>
+                        <div class="w-px h-12 bg-[#1c1b1b]/10"></div>
+                        <div class="text-center">
+                            <span class="font-display text-3xl font-bold text-[#476500]">200+</span>
+                            <p class="text-xs text-[#444939] mt-1">Progetti completati</p>
+                        </div>
+                        <div class="w-px h-12 bg-[#1c1b1b]/10"></div>
+                        <div class="text-center">
+                            <span class="font-display text-3xl font-bold text-[#476500]">100%</span>
+                            <p class="text-xs text-[#444939] mt-1">Materiali certificati</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Lavori (Portfolio Carousel)
+         ============================================================ -->
+    <section class="bg-[#fcf9f8]" id="lavori">
+
+        <!-- Section Header -->
+        <div class="py-20 md:py-24 text-center px-6">
+            <div class="inline-flex items-center gap-3 mb-4">
+                <div class="w-8 h-[2px] bg-[#476500]"></div>
+                <span class="text-[#476500] font-heading font-semibold text-xs tracking-widest uppercase">Portfolio d'Eccellenza</span>
+                <div class="w-8 h-[2px] bg-[#476500]"></div>
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1c1b1b] mb-6">Alcuni Dei Nostri Lavori</h2>
+            <p class="text-[#444939] max-w-2xl mx-auto text-lg">
+                Esplora una selezione dei nostri progetti realizzati con passione, precisione millimetrica e rispetto per l'ambiente.
+            </p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative h-[80vh] md:h-screen w-full bg-[#1c1b1b] overflow-hidden select-none" id="lavori-carousel">
+            <div class="relative h-full w-full">
+
+                <!-- Slide 1: Parigi -->
+                <div class="carousel-slide active" data-index="0">
+                    <img alt="Parigi" class="w-full h-full object-cover" src="/img/slider/dopo_copia.png" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Parigi</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Villa Eco-Luxe</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Struttura ad alta efficienza in XLAM e lamellare, montata e irrigidita in soli 16 giorni con sistemi a secco e VMC.
+                                Ingegnerizzazione dei nodi e sollevamenti fino a 21m per un flusso tecnico integrato firmato gi.ada servizi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Palermo -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="Palermo" class="w-full h-full object-cover" src="/img/galleria_lavori/palermo.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Palermo</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Scala in Acciaio e Vetro</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Scala d'emergenza in acciaio per l'ISMETT di Palermo, interamente realizzata con tecnologia di precisione CNC.
+                                Un'opera ad alta specializzazione tecnica che unisce sicurezza, controllo numerico e ingegneria strutturale.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Torregrotta -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="Torregrotta" class="w-full h-full object-cover" src="/img/galleria_lavori/torregrotta.png" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Torregrotta</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Residenza Mediterranea</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Demolizione e ricostruzione in XLAM a Torregrotta: un edificio antisismico in bioedilizia con materiali certificati CAM.
+                                Un vero NZEB in classe A4 che produce più energia di quanta ne consumi, con progetto integrato Gi.ada s.r.l.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Patti -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="Patti" class="w-full h-full object-cover" src="/img/galleria_lavori/patti.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Patti</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Stazione di Ricarica EV</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Stazione di ricarica EV autosufficiente a Patti: unione di acciaio, legno lamellare e copertura fotovoltaica integrata.
+                                Sistema a secco progettato per la massima efficienza e rapidità di cantiere, tra ingegneria ibrida ed e-mobility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: San Pier Niceno -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="San Pier Niceno" class="w-full h-full object-cover" src="/img/galleria_lavori/sanpierniceno.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">San Pier Niceno</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Villetta Bio-Sostenibile</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Avanzamento lavori a San Pier Niceto per una villetta indipendente prefabbricata in XLAM.
+                                Ingegneria civile e bioarchitettura applicate all'edilizia privata per coniugare sostenibilità e design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Condrò -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="Condrò" class="w-full h-full object-cover" src="/img/galleria_lavori/condro.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Condrò</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Residenza XLAM</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Avanzamento lavori per una casa in XLAM a Condró: bioarchitettura prefabbricata e ingegneria civile d'avanguardia.
+                            Un cantiere residenziale privato che unisce design Made in Italy, sostenibilità e precisione strutturale.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Siracusa -->
+                <div class="carousel-slide" data-index="1">
+                    <img alt="Siracusa" class="w-full h-full object-cover" src="/img/galleria_lavori/siracusa.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/20"></div>
+                    <div class="absolute inset-y-0 left-0 flex items-center z-20 pl-16 md:pl-24">
+                        <div class="max-w-2xl text-white">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-[#c8f17a] text-xl">location_on</span>
+                                <span class="font-label-sm text-sm uppercase tracking-widest">Siracusa</span>
+                            </div>
+                            <h3 class="font-display text-4xl md:text-7xl font-bold mb-6">Eco-Villa</h3>
+                            <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                                <strong>Tipo di Lavoro:</strong> Nuovo cantiere residenziale a Siracusa per una villa in XLAM caratterizzata da un ampio spazio esterno.
+                            Ingegneria civile e bioarchitettura si fondono in una struttura prefabbricata sostenibile dal design Made in Italy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel Counter -->
+            <div class="absolute top-10 right-10 z-30 text-white font-heading text-lg tracking-widest">
+                <span id="carousel-current">01</span>
+                <span class="mx-2 text-white/40">/</span>
+                <span class="text-white/40">07</span>
+            </div>
+
+            <!-- Dot Navigation -->
+            <div class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-4" id="carousel-dots">
+                <button class="w-2 h-8 bg-[#c8f17a] rounded-full transition-all duration-300"              data-index="0"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="1"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="2"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="3"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="4"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="5"></button>
+                <button class="w-2 h-2 bg-white/30 rounded-full transition-all duration-300 hover:bg-white/60" data-index="6"></button>
+            </div>
+
+            <!-- Prev / Next Buttons -->
+            <div class="absolute right-6 md:right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2">
+                <button class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-white hover:bg-white/20 transition-all" id="carousel-prev">
+                    <span class="material-symbols-outlined text-2xl">expand_less</span>
+                </button>
+                <button class="p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-white hover:bg-white/20 transition-all" id="carousel-next">
+                    <span class="material-symbols-outlined text-2xl">expand_more</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Servizi
+         ============================================================ -->
+    <section class="py-24 md:py-32 bg-[#fcf9f8] overflow-hidden" id="servizi">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="mb-16">
+                <div class="inline-flex items-center gap-3 mb-6">
+                    <div class="w-12 h-[2px] bg-[#476500]"></div>
+                    <span class="text-[#476500] font-heading font-semibold text-sm tracking-widest uppercase">Eccellenza Tecnica</span>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1c1b1b]">I Servizi Di GI.ADA</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Left Column: Services List (populated by JS) -->
+                <div class="space-y-0" id="services-list-container">
+                    <!-- Populated dynamically via JavaScript -->
+                </div>
+
+                <!-- Right Column: Active Service Preview (desktop only) -->
+                <div class="sticky top-32 h-fit hidden lg:block">
+                    <div class="relative min-h-[500px] rounded-2xl overflow-hidden shadow-2xl group/img">
+                        <img
+                            alt="Service Detail"
+                            class="absolute inset-0 w-full h-full object-cover"
+                            id="service-image"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB06-axN9ZkD29NW3sOGUbDo-F9WVlvY4Xxwf3MQtb16pLy8VOgv9w9kCJaBp4Z_PYdFjFhZxA8lr3i4Oyo5elyNEhF4_efq0PWTB7FWLXcA2VjXKYwit9CC1B18cc86PQP-8E3JZEE8N1UTwduh3QnhieOyf4KoVdgN2BwyIoOBapBF66DUCjxfXSljotoLndGgfCEN2gq4hKjV91SwsclFipCC1w5WtxbxZG22B7M-mQiNKEla6tSpqfp7YJGLsj7XFTAWtcaEU8"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                            <h3 class="font-display text-3xl font-bold text-white mb-4" id="service-title-preview">
+                                Progettazione e Ingegneria
+                            </h3>
+                            <p class="text-white/80 text-lg leading-relaxed max-w-md" id="service-desc-preview">
+                                Sviluppiamo soluzioni architettoniche e ingegneristiche all'avanguardia, ottimizzando ogni dettaglio
+                                per la massima efficienza e durabilità.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Comparison Slider (Prima / Dopo)
+         ============================================================ -->
+    <section
+        class="relative py-24 md:py-32 bg-fixed bg-center bg-cover overflow-hidden"
+        style="background-image: url('/IMG/background4.png');"
+    >
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-transparent z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-[1px] bg-[#476500]"></div>
+                    <span class="text-[#476500] font-heading font-semibold text-sm tracking-[0.2em] uppercase">Trasformazione</span>
+                    <div class="w-12 h-[1px] bg-[#476500]"></div>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1c1b1b] mb-6">Trust the process</h2>
+                <p class="text-[#1c1b1b]/60 max-w-2xl mx-auto text-lg leading-relaxed">
+                    Testimonia l'evoluzione dei nostri progetti. Dalla visione strutturale grezza alla perfezione architettonica
+                    finale, curata in ogni minimo dettaglio.
+                </p>
+            </div>
+
+            <!-- Slider -->
+            <div class="max-w-5xl mx-auto">
+                <div class="comparison-slider-container rounded-2xl shadow-2xl border border-white/10" id="comparison-slider">
+
+                    <!-- After Image (background layer) -->
+                    <img alt="Dopo" class="absolute inset-0 w-full h-full object-cover" src="/IMG/slider/dopo_copia.png" />
+
+                    <!-- Before Image (foreground clipped layer) -->
+                    <div class="comparison-slider-before" id="slider-before">
+                        <img
+                            alt="Prima"
+                            class="absolute inset-0 w-full h-full object-cover"
+                            src="/IMG/slider/prima.png"
+                            style="width: 100%; max-width: none;"
+                        />
+                    </div>
+
+                    <!-- Labels -->
+                    <div class="absolute top-6 left-6 z-20 px-4 py-1.5 bg-[#476500]/90 backdrop-blur-md rounded-full text-white text-xs font-bold uppercase tracking-widest pointer-events-none">Prima</div>
+                    <div class="absolute top-6 right-6 z-20 px-4 py-1.5 bg-[#476500]/90 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest pointer-events-none">Dopo</div>
+
+                    <!-- Slider Handle -->
+                    <div
+                        class="absolute top-0 bottom-0 z-30 pointer-events-none"
+                        id="slider-line"
+                        style="left: 50%; width: 2px; background-color: white;"
+                    >
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-2xl pointer-events-auto cursor-ew-resize">
+                            <div class="flex gap-1 text-[#1c1b1b]">
+                                <span class="material-symbols-outlined text-lg leading-none">chevron_left</span>
+                                <span class="material-symbols-outlined text-lg leading-none">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Perché Scegliere GI.ADA
+         ============================================================ -->
+    <section class="py-24 md:py-32 bg-[#fcf9f8] overflow-hidden" id="perche-noi">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                <!-- Left Column: Interactive Pillars -->
+                <div>
+                    <div class="inline-flex items-center gap-3 mb-6">
+                        <div class="w-12 h-[2px] bg-[#476500]"></div>
+                        <span class="text-[#476500] font-heading font-semibold text-sm tracking-widest uppercase">Perché Scegliere GI.ADA</span>
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1c1b1b] mb-12">
+                        I pilastri della nostra eccellenza.
+                    </h2>
+                    <!-- Pillars (populated by JS) -->
+                    <div class="space-y-4" id="pillars-container">
+                        <!-- Populated dynamically via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Grid -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- Column A (offset top) -->
+                        <div class="space-y-4 pt-12">
+                            <div class="aspect-square bg-white rounded-3xl shadow-xl border border-black/5 p-8 flex flex-col justify-center items-center text-center group hover:scale-105 transition-transform">
+                                <div class="w-16 h-16 bg-[#526045]/10 rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-3xl text-[#526045]">eco</span>
+                                </div>
+                                <span class="font-heading font-bold text-[#1c1b1b]">Eco-Sostenibile</span>
+                            </div>
+                            <div class="aspect-square bg-[#476500] rounded-3xl shadow-xl p-8 flex flex-col justify-center items-center text-center text-white group hover:scale-105 transition-transform">
+                                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-3xl">bolt</span>
+                                </div>
+                                <span class="font-heading font-bold">Efficienza</span>
+                            </div>
+                        </div>
+
+                        <!-- Column B -->
+                        <div class="space-y-4">
+                            <div class="aspect-square bg-[#5d7f13]/10 rounded-3xl shadow-xl border border-[#5d7f13]/20 p-8 flex flex-col justify-center items-center text-center group hover:scale-105 transition-transform">
+                                <div class="w-16 h-16 bg-[#5d7f13] rounded-2xl flex items-center justify-center mb-4 text-white">
+                                    <span class="material-symbols-outlined text-3xl">thermostat</span>
+                                </div>
+                                <span class="font-heading font-bold text-[#1c1b1b]">Comfort</span>
+                            </div>
+                            <div class="aspect-square bg-white rounded-3xl shadow-xl border border-black/5 p-8 flex flex-col justify-center items-center text-center group hover:scale-105 transition-transform">
+                                <div class="w-16 h-16 bg-[#747967]/10 rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-3xl text-[#747967]">wb_sunny</span>
+                                </div>
+                                <span class="font-heading font-bold text-[#1c1b1b]">Bio-Climatica</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Decorative blur -->
+                    <div class="absolute -z-10 -top-8 -right-8 w-64 h-64 bg-[#476500]/5 rounded-full blur-3xl"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Final CTA
+         ============================================================ -->
+    <section class="relative py-32 md:py-40 overflow-hidden bg-[#1c1b1b]" id="final-cta">
+
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img
+                alt="Architectural Background"
+                class="w-full h-full object-cover opacity-50"
+                src="/img/ctaimg.png"
+            />
+            <div class="absolute inset-0 bg-[#1c1b1b]/20"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-4 mb-8">
+                <div class="w-16 h-[2px] bg-[#c8f17a]"></div>
+                <div class="w-16 h-[2px] bg-[#c8f17a]"></div>
+            </div>
+            <h2 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.95] mb-8 animate-fade-in-up">
+                Vivi la<br />
+                <span class="text-[#c8f17a]">Sostenibilità</span>
+            </h2>
+            <p class="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-12 animate-fade-in-up delay-100">
+                Trasforma la tua visione in una realtà costruita con passione, precisione e rispetto per l'ambiente.
+            </p>
+            <div class="animate-fade-in-up delay-200">
+                <a
+                    class="inline-flex items-center gap-3 bg-[#476500] text-white font-heading font-bold rounded-xl px-10 py-5 shadow-lg shadow-[#476500]/25 hover:scale-105 transition-transform duration-300 uppercase tracking-wider"
+                    href="#contatti"
+                    onclick="document.getElementById('contatti')?.scrollIntoView({behavior: 'smooth'}); return false;"
+                >
+                    Richiedi un preventivo
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================================
+         SECTION — Contatti
+         ============================================================ -->
+    <section class="py-24 md:py-32 bg-[#fcf9f8] overflow-hidden" id="contatti">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-[1px] bg-[#476500]"></div>
+                    <span class="text-[#476500] font-heading font-semibold text-sm tracking-[0.2em] uppercase">Contattaci</span>
+                    <div class="w-12 h-[1px] bg-[#476500]"></div>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-[#1c1b1b] mb-6 animate-fade-in-up">
+                    Parliamo del Tuo Progetto
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Contact Info Card -->
+                <div class="bg-white rounded-2xl p-8 border border-[#c4c9b4]/40 shadow-sm space-y-8 animate-fade-in-up delay-100">
+
+                    <!-- Email -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-xl bg-[#476500]/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#476500]">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#1c1b1b] uppercase tracking-wider mb-1">Email</h4>
+                            <a class="text-lg text-[#444939] hover:text-[#476500] transition-colors" href="mailto:giadaservizi2024@gmail.com">
+                                giadaservizi2024@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Telefono -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-xl bg-[#476500]/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#476500]">call</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#1c1b1b] uppercase tracking-wider mb-1">Telefono</h4>
+                            <a class="text-lg text-[#444939] hover:text-[#476500] transition-colors" href="tel:+393298496837">
+                                +39 329 8496837
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Indirizzo -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-xl bg-[#476500]/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#476500]">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#1c1b1b] uppercase tracking-wider mb-1">Indirizzo</h4>
+                            <p class="text-lg text-[#444939]">C/da Monte n6, Patti (ME) – Sicilia</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Technical Referents Card -->
+                <div class="bg-[#476500] rounded-2xl p-8 text-white shadow-xl space-y-8 animate-fade-in-up delay-200">
+                    <h3 class="font-display text-2xl font-bold mb-4">Referenti Tecnici</h3>
+
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#c8f17a] text-3xl">person</span>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold">Dott.Ing Giuseppe Gregoli</p>
+                            <p class="text-white/70">Ingegnere Strutturale</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#c8f17a] text-3xl">person</span>
+                        </div>
+                        <div>
+                            <p class="text-xl font-bold">Dott.Ing Denis Scalia</p>
+                            <p class="text-white/70">Ingegnere Energetico</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         MOBILE NAV — Slide-in Overlay
+         ============================================================ -->
+    <div
+        class="fixed inset-y-0 right-0 w-full md:w-80 bg-surface z-[70] shadow-2xl border-l border-outline-variant translate-x-full transition-transform duration-300 flex flex-col"
+        id="mobile-nav"
+    >
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-outline-variant">
+            <span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary-container">Menu</span>
+            <button class="p-2 text-on-surface-variant" id="mobile-menu-close">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="flex-1 overflow-y-auto py-6 px-4">
+            <nav class="space-y-2">
+                <a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-xl px-4 py-4 font-body-md text-body-md" href="#home">
+                    <span class="material-symbols-outlined">home</span>Home
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors" href="#chi-siamo">
+                    <span class="material-symbols-outlined">groups</span>Chi siamo
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors" href="#lavori">
+                    <span class="material-symbols-outlined">visibility</span>Lavori
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors" href="#servizi">
+                    <span class="material-symbols-outlined">build</span>Servizi
+                </a>
+
+                <!-- Accordion: Cosa offriamo -->
+                <div class="group" id="cosa-offriamo-accordion">
+                    <button class="w-full flex items-center justify-between text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined">design_services</span>Cosa offriamo
+                        </div>
+                        <span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+                    </button>
+                    <div class="accordion-content bg-surface-container-low">
+                        <a class="block pl-12 pr-4 py-3 text-label-sm text-on-surface-variant hover:bg-secondary-container transition-colors" href="#">Progettazione e ingegneria</a>
+                        <a class="block pl-12 pr-4 py-3 text-label-sm text-on-surface-variant hover:bg-secondary-container transition-colors" href="#">Strutture in legno</a>
+                        <a class="block pl-12 pr-4 py-3 text-label-sm text-on-surface-variant hover:bg-secondary-container transition-colors" href="#">Efficienza energetica e finiture</a>
+                    </div>
+                </div>
+
+                <a class="flex items-center gap-3 text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors" href="#perche-noi">
+                    <span class="material-symbols-outlined">verified</span>Perché Noi
+                </a>
+                <a class="flex items-center gap-3 text-on-surface-variant px-4 py-4 font-body-md text-body-md hover:bg-surface-container-high transition-colors" href="#contatti">
+                    <span class="material-symbols-outlined">mail</span>Contatti
+                </a>
+            </nav>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="p-6 border-t border-outline-variant">
+            <a
+                class="w-full inline-block text-center bg-primary-container text-on-primary px-6 py-4 rounded-xl font-label-sm text-label-sm uppercase tracking-wider shadow-md"
+                href="#preventivo"
+            >
+                Richiedi Preventivo
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Nav Backdrop -->
+    <div class="fixed inset-0 bg-black/40 z-[65] hidden transition-opacity duration-300" id="nav-backdrop"></div>
+
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-white border-t border-[#c4c9b4]/40 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Brand Column -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <a class="inline-block mb-6" href="#home">
+                        <img
+                            alt="GI.ADA Servizi srl"
+                            class="w-40 h-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDuYiThvDN-g_rs0LNV8eZJvavpoNDxuhtRlHBg05Gyn9BL83HOY28GzH6xJu6ckVwvK5wf-hxMzfQbNpyuw7bzPUETsuNDmMCwORuSvna2KUNWl7W7W-NEs-U0H3vBA2JZEezdp984b3sdeDWbBev0VwmjBXzVL1Eb0dynWaAyl3GZFiN5E-gWjR32UuNaE-1tIevxurd1onB536cMVQff7oRBzNFleO8BA9d1z-sSHGCaNdhqrfXF6Mc767qe9Wx2QKTXSr6400"
+                        />
+                    </a>
+                    <p class="text-[#444939] text-base leading-relaxed max-w-md">
+                        Progettiamo e realizziamo soluzioni sostenibili in legno, unendo l'innovazione tecnologica alla maestria
+                        artigianale per creare ambienti sani, sicuri e duraturi.
+                    </p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h4 class="font-display font-bold text-[#1c1b1b] uppercase tracking-wider text-sm mb-6">Link Rapidi</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#home"      onclick="document.getElementById('home')?.scrollIntoView({behavior:'smooth'}); return false;">Home</a></li>
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#chi-siamo" onclick="document.getElementById('chi-siamo')?.scrollIntoView({behavior:'smooth'}); return false;">Chi siamo</a></li>
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#lavori"    onclick="document.getElementById('lavori')?.scrollIntoView({behavior:'smooth'}); return false;">Lavori</a></li>
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#servizi"   onclick="document.getElementById('servizi')?.scrollIntoView({behavior:'smooth'}); return false;">Servizi</a></li>
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#perche-noi"onclick="document.getElementById('perche-noi')?.scrollIntoView({behavior:'smooth'}); return false;">Perché Noi</a></li>
+                        <li><a class="text-[#444939] hover:text-[#476500] transition-colors" href="#contatti"  onclick="document.getElementById('contatti')?.scrollIntoView({behavior:'smooth'}); return false;">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="font-display font-bold text-[#1c1b1b] uppercase tracking-wider text-sm mb-6">Contatti</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[#476500] text-xl">mail</span>
+                            <a class="text-[#444939] hover:text-[#476500] transition-colors" href="mailto:giadaservizi2024@gmail.com">giadaservizi2024@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[#476500] text-xl">call</span>
+                            <a class="text-[#444939] hover:text-[#476500] transition-colors" href="tel:+393298496837">+39 329 8496837</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[#476500] text-xl">location_on</span>
+                            <span class="text-[#444939]">C/da Monte n6, Patti (ME) – Sicilia</span>
+                        </li>
+                        <!--Instagram-->
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20"
+                                fill="#476500"
+                                viewBox="0 0 24 24">
+                                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5zm5.25-2.38a1.13 1.13 0 1 1 0 2.26 1.13 1.13 0 0 1 0-2.26z"/>
+                            </svg>
+                            <a href="https://www.instagram.com/gi.ada_srl/" target="_blank">
+                                Instagram
+                            </a>
+                        </li>
+                        <!--Facebook-->
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                fill="#476500"
+                                viewBox="0 0 24 24">
+                                <path d="M24 12a12 12 0 1 0-13.88 11.85v-8.39H7.08V12h3.04V9.36c0-3 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.93-1.95 1.87V12h3.32l-.53 3.46h-2.79v8.39A12 12 0 0 0 24 12z"/>
+                            </svg>
+                            <a class="text-[#444939] hover:text-[#476500] transition-colors"
+                            href="https://www.facebook.com/people/GIADA-Servizi-Srl/61565941920589/?locale=it_IT"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Pagina Facebook di GI.ADA Servizi srl">
+                                Facebook
+                            </a>
+                        </li>
+                        <!--Azienda-->
+                        <li class="flex items-start gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="#476500"
+                            viewBox="0 0 24 24">
+                            <path d="M3 21h18v-2H3v2zm2-4h4V3H5v14zm6 0h8V7h-8v10zm2-8h2v2h-2V9zm0 4h2v2h-2v-2z"/>
+                        </svg>
+                        <a class="text-[#444939] hover:text-[#476500] transition-colors"
+                        href="https://www.ufficiocamerale.it/7914/giada-servizi-srl?srsltid=AfmBOopAUCO5xTEmDVt1Cu1fOwVzCt6ummcboDEMOI-Q6r3jWS2ieQjU"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Scheda aziendale di GI.ADA Servizi srl">
+                            Dati Aziendali
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-[#c4c9b4]/40 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-[#444939]/60">© 2024 GI.ADA Servizi srl. Tutti i diritti riservati.</p>
+                <div class="flex gap-6 text-xs text-[#444939]/60">
+                    <span>P.IVA 03782690832</span>
+                    <a class="hover:text-[#476500] transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-[#476500] transition-colors" href="#">Cookie Policy</a>
+                    <a class="hover:text-[#476500] transition-colors" href="https://www.instagram.com/tekworn/">Sviluppato da <strong>TEKWORN</strong></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script src="asset/js/index.js"></script>
+
+</body>
+</html>
