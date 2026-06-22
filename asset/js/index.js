@@ -175,8 +175,37 @@
 
             container.innerHTML = pillarsData.map((pillar, index) => {
                 const isActive = index === activePillarIndex;
+                // return `
+                //     <div class="pillar-item group border-b border-black/5 ${isActive ? 'active' : ''}" data-index="${index}">
+                //         <button class="w-full py-6 flex flex-col text-left transition-all" onclick="updatePillar(${index})">
+                //             <div class="flex items-center gap-6">
+                //                 <div
+                //                     class="w-12 h-12 rounded-xl flex items-center justify-center transition-colors"
+                //                     style="background-color: ${isActive ? pillar.color : pillar.color + '10'}"
+                //                 >
+                //                     <span
+                //                         class="material-symbols-outlined"
+                //                         style="color: ${isActive ? '#fff' : pillar.color}"
+                //                     >${pillar.icon}</span>
+                //                 </div>
+                //                 <span
+                //                     class="font-display text-xl md:text-2xl font-bold transition-colors ${isActive ? 'text-[#1c1b1b]' : 'text-[#444939]'}"
+                //                 >${pillar.title}</span>
+                //             </div>
+                //             <div class="pillar-content pl-[72px]">
+                //                 <p class="text-[#444939] text-base leading-relaxed">${pillar.desc}</p>
+                //             </div>
+                //         </button>
+                //     </div>
+                // `;
                 return `
-                    <div class="pillar-item group border-b border-black/5 ${isActive ? 'active' : ''}" data-index="${index}">
+                    <div
+                        class="pillar-item group border-b border-black/5 ${isActive ? 'active' : ''}"
+                        data-index="${index}"
+                        data-aos="fade-right"
+                        data-aos-delay="${index * 50}"
+                        data-aos-duration="500"
+                    >
                         <button class="w-full py-6 flex flex-col text-left transition-all" onclick="updatePillar(${index})">
                             <div class="flex items-center gap-6">
                                 <div
@@ -188,17 +217,27 @@
                                         style="color: ${isActive ? '#fff' : pillar.color}"
                                     >${pillar.icon}</span>
                                 </div>
+
                                 <span
                                     class="font-display text-xl md:text-2xl font-bold transition-colors ${isActive ? 'text-[#1c1b1b]' : 'text-[#444939]'}"
-                                >${pillar.title}</span>
+                                >
+                                    ${pillar.title}
+                                </span>
                             </div>
+
                             <div class="pillar-content pl-[72px]">
-                                <p class="text-[#444939] text-base leading-relaxed">${pillar.desc}</p>
+                                <p class="text-[#444939] text-base leading-relaxed">
+                                    ${pillar.desc}
+                                </p>
                             </div>
                         </button>
                     </div>
                 `;
             }).join('');
+
+            if (window.AOS) {
+                AOS.refreshHard();
+            }
         }
 
         // ----------------------------------------------------------------
