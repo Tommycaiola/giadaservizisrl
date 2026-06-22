@@ -88,32 +88,81 @@
         // RENDER: Services List
         // ----------------------------------------------------------------
 
+        // function renderServicesList() {
+        //     const container = document.getElementById('services-list-container');
+        //     if (!container) return;
+
+        //     container.innerHTML = servicesData.map((service, index) => {
+        //         const isActive = index === activeServiceIndex;
+        //         return `
+        //             <div class="service-item group border-b border-[#c4c9b4]/40 ${isActive ? 'active' : ''}" data-index="${index}" data-aos="fade-right" data-aos-delay="${index * 80}" data-aos-duration="500">
+        //                 <button
+        //                     class="w-full py-5 flex flex-col text-left transition-all duration-300 ${isActive ? 'pl-6 text-[#476500]' : 'pl-0 hover:pl-3 text-on-surface-variant'}"
+        //                     onclick="updateService(${index})"
+        //                 >
+        //                     <div class="flex items-center justify-between w-full">
+        //                         <span class="font-display text-xl md:text-2xl font-semibold">${service.title}</span>
+        //                         <div class="flex items-center gap-4">
+                                    
+        //                             <span class="material-symbols-outlined transition-transform duration-300 ${isActive ? 'rotate-90' : ''}">arrow_forward</span>
+        //                         </div>
+        //                     </div>
+        //                     <div class="service-desc pr-12">
+        //                         <p class="text-on-surface-variant/80 text-base leading-relaxed">${service.desc}</p>
+        //                     </div>
+        //                 </button>
+        //             </div>
+        //         `;
+        //     }).join('');
+        //     if (window.AOS) {
+        //         AOS.refresh();
+        //     }
+        // }
+
         function renderServicesList() {
             const container = document.getElementById('services-list-container');
             if (!container) return;
 
             container.innerHTML = servicesData.map((service, index) => {
                 const isActive = index === activeServiceIndex;
+
                 return `
-                    <div class="service-item group border-b border-[#c4c9b4]/40 ${isActive ? 'active' : ''}" data-index="${index}">
+                    <div class="service-item group border-b border-[#c4c9b4]/40 ${isActive ? 'active' : ''}"
+                        data-index="${index}"
+                        data-aos="fade-right"
+                        data-aos-delay="${index * 50}"
+                        data-aos-duration="500">
+
                         <button
                             class="w-full py-5 flex flex-col text-left transition-all duration-300 ${isActive ? 'pl-6 text-[#476500]' : 'pl-0 hover:pl-3 text-on-surface-variant'}"
                             onclick="updateService(${index})"
                         >
                             <div class="flex items-center justify-between w-full">
                                 <span class="font-display text-xl md:text-2xl font-semibold">${service.title}</span>
+
                                 <div class="flex items-center gap-4">
-                                    <div class="w-8 h-[2px] bg-[#476500] transition-transform duration-500 origin-right ${isActive ? 'scale-x-100' : 'scale-x-0'}"></div>
-                                    <span class="material-symbols-outlined transition-transform duration-300 ${isActive ? 'rotate-90' : ''}">arrow_forward</span>
+                                    <span class="material-symbols-outlined transition-transform duration-300 ${isActive ? 'rotate-90' : ''}">
+                                        arrow_forward
+                                    </span>
                                 </div>
                             </div>
+
                             <div class="service-desc pr-12">
-                                <p class="text-on-surface-variant/80 text-base leading-relaxed">${service.desc}</p>
+                                <p class="text-on-surface-variant/80 text-base leading-relaxed">
+                                    ${service.desc}
+                                </p>
                             </div>
                         </button>
                     </div>
                 `;
             }).join('');
+
+            
+            requestAnimationFrame(() => {
+                if (window.AOS) {
+                    AOS.refresh();
+                }
+            });
         }
 
         // ----------------------------------------------------------------
